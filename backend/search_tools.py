@@ -61,9 +61,13 @@ class CourseSearchTool(Tool):
         Returns:
             Formatted search results or error message
         """
+<<<<<<< HEAD
         # Clear stale sources from a previous call before this one resolves
         self.last_sources = []
 
+=======
+        
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
         # Use the vector store's unified search interface
         results = self.store.search(
             query=query,
@@ -91,16 +95,25 @@ class CourseSearchTool(Tool):
         """Format search results with course and lesson context"""
         formatted = []
         sources = []  # Track sources for the UI
+<<<<<<< HEAD
 
         for doc, meta in zip(results.documents, results.metadata):
             course_title = meta.get('course_title', 'unknown')
             lesson_num = meta.get('lesson_number')
 
+=======
+        
+        for doc, meta in zip(results.documents, results.metadata):
+            course_title = meta.get('course_title', 'unknown')
+            lesson_num = meta.get('lesson_number')
+            
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
             # Build context header
             header = f"[{course_title}"
             if lesson_num is not None:
                 header += f" - Lesson {lesson_num}"
             header += "]"
+<<<<<<< HEAD
 
             # Track source for the UI, with a link to the lesson video (or course) if available
             source = course_title
@@ -111,6 +124,15 @@ class CourseSearchTool(Tool):
                 link = self.store.get_course_link(course_title)
             sources.append({"text": source, "link": link})
 
+=======
+            
+            # Track source for the UI
+            source = course_title
+            if lesson_num is not None:
+                source += f" - Lesson {lesson_num}"
+            sources.append(source)
+            
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
             formatted.append(f"{header}\n{doc}")
         
         # Store sources for retrieval
@@ -118,6 +140,7 @@ class CourseSearchTool(Tool):
         
         return "\n\n".join(formatted)
 
+<<<<<<< HEAD
 
 class CourseOutlineTool(Tool):
     """Tool for retrieving a course's outline: title, link, and full lesson list"""
@@ -186,6 +209,8 @@ class CourseOutlineTool(Tool):
         return formatted
 
 
+=======
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 class ToolManager:
     """Manages available tools for the AI"""
     
@@ -209,11 +234,16 @@ class ToolManager:
         """Execute a tool by name with given parameters"""
         if tool_name not in self.tools:
             return f"Tool '{tool_name}' not found"
+<<<<<<< HEAD
 
         try:
             return self.tools[tool_name].execute(**kwargs)
         except Exception as e:
             return f"Error executing tool '{tool_name}': {e}"
+=======
+        
+        return self.tools[tool_name].execute(**kwargs)
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
     
     def get_last_sources(self) -> list:
         """Get sources from the last search operation"""

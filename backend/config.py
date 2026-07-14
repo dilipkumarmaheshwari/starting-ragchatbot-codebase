@@ -10,7 +10,11 @@ class Config:
     """Configuration settings for the RAG system"""
     # Anthropic API settings
     ANTHROPIC_API_KEY: str = os.getenv("ANTHROPIC_API_KEY", "")
+<<<<<<< HEAD
     ANTHROPIC_MODEL: str = "claude-sonnet-4-5"
+=======
+    ANTHROPIC_MODEL: str = "claude-sonnet-4-20250514"
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
     
     # Embedding model settings
     EMBEDDING_MODEL: str = "all-MiniLM-L6-v2"

@@ -5,7 +5,11 @@ const API_URL = '/api';
 let currentSessionId = null;
 
 // DOM elements
+<<<<<<< HEAD
 let chatMessages, chatInput, sendButton, totalCourses, courseTitles, newChatButton;
+=======
+let chatMessages, chatInput, sendButton, totalCourses, courseTitles;
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,8 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     sendButton = document.getElementById('sendButton');
     totalCourses = document.getElementById('totalCourses');
     courseTitles = document.getElementById('courseTitles');
+<<<<<<< HEAD
     newChatButton = document.getElementById('newChatButton');
 
+=======
+    
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
     setupEventListeners();
     createNewSession();
     loadCourseStats();
@@ -39,9 +47,12 @@ function setupEventListeners() {
             sendMessage();
         });
     });
+<<<<<<< HEAD
 
     // New chat
     newChatButton.addEventListener('click', startNewChat);
+=======
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 }
 
 
@@ -126,6 +137,7 @@ function addMessage(content, type, sources = null, isWelcome = false) {
     let html = `<div class="message-content">${displayContent}</div>`;
     
     if (sources && sources.length > 0) {
+<<<<<<< HEAD
         const sourceHtml = sources.map(s => {
             const label = escapeHtml(s.text);
             return s.link
@@ -136,6 +148,12 @@ function addMessage(content, type, sources = null, isWelcome = false) {
             <details class="sources-collapsible">
                 <summary class="sources-header">Sources</summary>
                 <div class="sources-content">${sourceHtml}</div>
+=======
+        html += `
+            <details class="sources-collapsible">
+                <summary class="sources-header">Sources</summary>
+                <div class="sources-content">${sources.join(', ')}</div>
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
             </details>
         `;
     }
@@ -162,6 +180,7 @@ async function createNewSession() {
     addMessage('Welcome to the Course Materials Assistant! I can help you with questions about courses, lessons and specific content. What would you like to know?', 'assistant', null, true);
 }
 
+<<<<<<< HEAD
 // Start a new chat: clear server-side history for the old session, then reset locally
 async function startNewChat() {
     if (currentSessionId) {
@@ -176,6 +195,8 @@ async function startNewChat() {
     createNewSession();
 }
 
+=======
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 // Load course statistics
 async function loadCourseStats() {
     try {

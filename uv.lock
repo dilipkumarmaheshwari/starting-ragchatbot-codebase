@@ -1,5 +1,9 @@
 version = 1
+<<<<<<< HEAD
 revision = 3
+=======
+revision = 2
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 requires-python = ">=3.13"
 
 [[package]]
@@ -471,6 +475,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "iniconfig"
 version = "2.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -480,6 +485,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 name = "jinja2"
 version = "3.1.6"
 source = { registry = "https://pypi.org/simple" }
@@ -1048,6 +1055,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "pluggy"
 version = "1.6.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1057,6 +1065,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 name = "posthog"
 version = "5.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1226,6 +1236,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "pytest"
 version = "9.1.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1242,6 +1253,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -1595,11 +1608,14 @@ dependencies = [
     { name = "uvicorn" },
 ]
 
+<<<<<<< HEAD
 [package.dev-dependencies]
 dev = [
     { name = "pytest" },
 ]
 
+=======
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 [package.metadata]
 requires-dist = [
     { name = "anthropic", specifier = "==0.58.2" },
@@ -1611,9 +1627,12 @@ requires-dist = [
     { name = "uvicorn", specifier = "==0.35.0" },
 ]
 
+<<<<<<< HEAD
 [package.metadata.requires-dev]
 dev = [{ name = "pytest", specifier = ">=9.1.1" }]
 
+=======
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 [[package]]
 name = "sympy"
 version = "1.14.0"

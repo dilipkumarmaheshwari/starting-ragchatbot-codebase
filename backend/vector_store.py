@@ -264,6 +264,7 @@ class VectorStore:
             return None
         except Exception as e:
             print(f"Error getting lesson link: {e}")
+<<<<<<< HEAD
 
     def get_course_outline(self, course_name: str) -> Optional[Dict[str, Any]]:
         """Resolve a (possibly partial) course name and return its full outline:
@@ -288,3 +289,6 @@ class VectorStore:
         except Exception as e:
             print(f"Error getting course outline: {e}")
             return None
+=======
+    
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d

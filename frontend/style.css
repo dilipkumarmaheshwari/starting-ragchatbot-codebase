@@ -241,6 +241,7 @@ header h1 {
 }
 
 .sources-content {
+<<<<<<< HEAD
     display: flex;
     flex-wrap: wrap;
     gap: 0.375rem;
@@ -277,6 +278,10 @@ a.source-badge.source-badge-link:hover {
     background: var(--surface-hover);
     color: var(--text-primary);
     border-color: var(--primary-color);
+=======
+    padding: 0 0.5rem 0.25rem 1.5rem;
+    color: var(--text-secondary);
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 }
 
 /* Markdown formatting styles */
@@ -479,6 +484,7 @@ a.source-badge.source-badge-link:hover {
     margin: 0.5rem 0;
 }
 
+<<<<<<< HEAD
 /* New Chat Button */
 .new-chat-button {
     width: 100%;
@@ -504,6 +510,8 @@ a.source-badge.source-badge-link:hover {
     color: var(--primary-color);
 }
 
+=======
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 /* Sidebar Headers */
 .stats-header,
 .suggested-header {

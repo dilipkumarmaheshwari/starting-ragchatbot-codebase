@@ -6,7 +6,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from pydantic import BaseModel
+<<<<<<< HEAD
 from typing import List, Optional, Dict
+=======
+from typing import List, Optional
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 import os
 
 from config import config
@@ -43,7 +47,11 @@ class QueryRequest(BaseModel):
 class QueryResponse(BaseModel):
     """Response model for course queries"""
     answer: str
+<<<<<<< HEAD
     sources: List[Dict[str, Optional[str]]]
+=======
+    sources: List[str]
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
     session_id: str
 
 class CourseStats(BaseModel):
@@ -73,6 +81,7 @@ async def query_documents(request: QueryRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+<<<<<<< HEAD
 @app.post("/api/session/{session_id}/end")
 async def end_session(session_id: str):
     """Clear a session's conversation history"""
@@ -82,6 +91,8 @@ async def end_session(session_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+=======
+>>>>>>> afe4036d698535d75cacc7f2454cd153d028ac4d
 @app.get("/api/courses", response_model=CourseStats)
 async def get_course_stats():
     """Get course analytics and statistics"""
